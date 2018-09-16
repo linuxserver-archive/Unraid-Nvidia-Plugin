@@ -2,8 +2,8 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "UnraidNVIDIA">
 <!ENTITY author    "CHBMB/Squid">
-<!ENTITY version   "2018.09.16">
-<!ENTITY md5       "08e30a22fbfd16d5fa1a3069dbcf40ba">
+<!ENTITY version   "2018.09.16a">
+<!ENTITY md5       "d33634df91578c4139cd4611e563e4ed">
 <!ENTITY launch    "Settings/UnraidNVIDIA">
 <!ENTITY plugdir   "/usr/local/emhttp/plugins/&name;">
 <!ENTITY github    "CHBMB/Unraid-NVIDIA-Plugin">
@@ -13,7 +13,7 @@
 <PLUGIN name="&name;" author="&author;" version="&version;" launch="&launch;" pluginURL="&pluginURL;">
 
 <CHANGES>
-###2018-09-16
+###2018-09-16a
 - Initial internal release.
 </CHANGES>
 
@@ -60,10 +60,10 @@ The 'post-install' script
 <FILE Run="/bin/bash">
 <INLINE>
 
-#if [ -d /dev/dvb ]; then
-#  chown -R nobody:users /dev/dvb
-#  chmod -R 777 /dev/dvb
-#fi
+if [ -d /dev/dri ]; then
+    chown -R nobody:users /dev/dri
+    chmod -R 777 /dev/dri
+fi
 
 # Parse Nvidia Details
 

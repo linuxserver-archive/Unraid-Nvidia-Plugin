@@ -1,0 +1,226 @@
+Menu="Utilities"
+Icon="UnraidNVIDIA.png"
+Title="Unraid NVIDIA"
+---
+
+<div align="center"><a href="https://www.linuxserver.io/" target="_blank">
+<img src="/plugins/UnraidNVIDIA/images/linuxserver.png">
+</a></div>
+
+<div align="center"><a href="https://www.nvidia.com/" target="_blank">
+<img src="/plugins/UnraidNVIDIA/images/nvidialogo.png">
+</a></div>
+
+<div align="center"><a href="https://www.linuxserver.io/donate/" target="_blank">
+<img src="/plugins/UnraidNVIDIA/images/donate.png">
+</a></div>
+
+<?
+/* CHBMB & Squid */
+
+#Unraid Version
+$version = parse_ini_file("/etc/unraid-version");
+$unRaidVersion = $version['version'];
+
+$installedVersion = exec("/usr/local/emhttp/plugins/dynamix.plugin.manager/scripts/plugin version /var/log/plugins/UnraidNVIDIA.plg");
+if ( is_file("/tmp/plugins/UnraidNVIDIA.plg") ) {
+  $upgradeVersion = exec("/usr/local/emhttp/plugins/dynamix.plugin.manager/scripts/plugin version /tmp/plugins/UnraidNVIDIA.plg");
+} else {
+  $upgradeVersion = "0";
+}
+
+#NVIDIA Version
+$nvidia = (is_file("/lib/firmware/unraid-media")) ? parse_ini_file("/lib/firmware/unraid-media") : array();
+$nvidiabase = $nvidia['base'];
+$nvidiadriver = $nvidia['driver'];
+$reboot = (is_file("/tmp/mediabuild/reboot")) ? "true" : "false";
+
+#Kernel Version
+$kernel = trim(shell_exec( "uname -r | cut -d- -f1" ));
+
+#Detect Adapters
+$graphicscard = shell_exec ( "cat /tmp/nvidia/graphicscard" );
+$drivermodules = shell_exec ( "cat /tmp/nvidia/drivermodules" );
+$kernelmodules = shell_exec ( "cat /tmp/nvidia/kernelmodules" );
+?>
+
+
+<script>
+
+var URL = "/plugins/UnraidNVIDIA/include/exec.php";
+
+function showDescription0(build)
+{
+  document.getElementById("Media").selectedIndex = 0;
+
+  showDescription(build);
+}
+
+function showDescription1(build)
+{
+  document.getElementById("unRaid").selectedIndex = 0;
+
+  showDescription(build);
+}
+
+function showDescription(build)
+{
+  $("#install").prop("disabled",false);
+
+  $.post(URL,{action:'show_description',build:build},function(data)
+  {
+    if (data)
+    {
+      $("#description").html(data);
+    }
+  });
+}
+
+function installBuild()
+{
+  var element = document.getElementById("Media");
+  var selected = element.options[element.selectedIndex].value;
+  var selectedText = element.options[element.selectedIndex].text;
+
+  if ( selected == "default" ) {
+    element = document.getElementById("unRaid");
+    selected = element.options[element.selectedIndex].value;
+    selectedText = element.options[element.selectedIndex].text;
+  }
+  swal({
+    title: "Are you sure you want to install "+selectedText+"?",
+    type: "warning",
+    closeOnConfirm: true,
+    showLoaderOnConfirm: true,
+    showCancelButton: true
+  },
+  function()
+  {
+    openBox("/plugins/UnraidNVIDIA/include/install.sh&arg1="+selected,"Installing "+selectedText,500,500);
+    setInterval(function() {
+      checkReboot();
+    }, 1000);
+  });
+}
+
+function checkReboot() {
+    $.post(URL,{action:'check_reboot'},function(data){
+      if (data){
+        $("#reboot").show();
+      }
+    });  }
+
+$(function()
+{
+  if ( "<?=$installedVersion?>" < "<?=$upgradeVersion?>" ) {
+    $('#upgradeAvailable').show();
+  }
+
+  $("#install").hide();
+
+  if ( "<?=$reboot?>" == "true" )
+  {
+    $("#reboot").show();
+  }
+
+  swal({
+    title: "Unraid NVIDIA",
+    text:  "Updating available builds",
+	imageUrl: "/plugins/UnraidNVIDIA/images/linuxserver.png",
+	imageSize: "300x62",
+	showConfirmButton: false,
+    showCancelButton: false
+  });
+
+  $.post(URL,{action:'build_buttons'},function(data)
+  {
+    if (data)
+    {
+      swal.close();
+      $("#buttons").html(data);
+      $("#install").show();
+    }
+  });
+});
+
+</script>
+
+<!-- Upgrade Notification-->
+<br><br>
+<div align="center">
+<div id='upgradeAvailable' hidden><font color='red'>An update to UnraidNVIDIA is Available</font></div>
+</div>
+<!-- Download & Install Button-->
+<div align="center">
+<span id='buttons'></span>
+<input type='button' id='install' disabled value='Download & Install' onclick='installBuild();'></input>
+<br><br>
+
+<!-- Cancel Button-->
+<input type='button' value='Cancel' onclick='done();'>
+</div>
+
+<!-- Description-->
+<div align="center">Description:  <span id='description'><font size='4'></font></span></div>
+
+<!-- Reboot Notification-->
+<div align="center"><span id='reboot' hidden><font size='4' color='red'>Installation Complete, you must reboot your server</font></span></div>
+</FORM>
+
+<!-- Left Menu-->
+<div style="width: 50%; float:left">
+	<div id="title">
+		<span class="left">Currently Installed Build</span>
+	</div>
+    	<table class="settings">
+
+			<tr>
+				<td>Linux Kernel Version:</td>
+				<td style="color:red"><b><?=$kernel?></b></td>
+			</tr>
+
+			<tr>
+				<td>Unraid Build:</td>
+				<?if ($nvidiabase=="Nvidia"):?>
+					<td style="color:red"><b>NVIDIA</b></td>
+				<?else:?>
+					<td style="color:red"><b>Stock</b></td>
+                		<?endif;?>
+			</tr>
+
+			<tr>
+				<td>Driver Version:</td>
+				<td style="color:red"><b><?=$nvidiadriver?></b></td>
+			</tr>
+
+			<tr>
+				<td>Graphics Card:</td>
+				<td style="color:red"><b><?=$graphicscard?></b></td>
+			</tr>
+
+			<tr>
+				<td>Driver Module:</td>
+				<td style="color:red"><b><?=$drivermodules?></b></td>
+			</tr>
+
+			<tr>
+				<td>Kernel Modules:</td>
+				<td style="color:red"><b><?=$kernelmodules?></b></td>
+			</tr>
+			
+			</table>
+</div>
+
+<!-- Right Menu-->
+<div style="width: 50%; float:left">
+	<div id="title">
+		<span class="left">Useful Links & Info</span>
+	</div>
+    	<table align="right">
+<table class="settings">
+
+			<tr>
+				<td><a href="https://forums.unraid.net/" style="color:red"target="_blank"><b>Unraid NVIDIA Support Thread</b></a></td>
+			</tr>
+   </table>
+</div>

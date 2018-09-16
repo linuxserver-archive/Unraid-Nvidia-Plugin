@@ -68,7 +68,7 @@ fi
 # Parse Nvidia Details
 
 mkdir -p /tmp/nvidia/
-lspci -v | grep GeForce | grep VGA | awk -F '[][]' '{print $2}' |  awk '{ print $0 > "/tmp/nvidia/gfx"NR}'
+lspci -v grep 'GeForce\|Quadro' | grep VGA | awk -F '[][]' '{print $2}' |  awk '{ print $0 > "/tmp/nvidia/gfx"NR}'
 lspci -v | grep driver | grep nvidia | cut -d : -f 2 | awk '{ print $0 > "/tmp/nvidia/drivers"NR}'
 lspci -v | grep modules | grep nvidia | cut -d : -f 2 | awk '{ print $0 > "/tmp/nvidia/modules"NR}'
 

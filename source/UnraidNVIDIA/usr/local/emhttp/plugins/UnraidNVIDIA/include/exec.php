@@ -1,5 +1,5 @@
 <?PHP
-require_once("/usr/local/emhttp/plugins/UnraidDVB/include/xmlHelpers.php");
+require_once("/usr/local/emhttp/plugins/UnraidNVIDIA/include/xmlHelpers.php");
 
 function download_url($url, $path = "", $bg = false, $timeout=45){
 	if ( ! strpos($url,"?") ) {

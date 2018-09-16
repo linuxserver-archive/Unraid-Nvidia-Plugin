@@ -2,8 +2,8 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "UnraidNVIDIA">
 <!ENTITY author    "CHBMB/Squid">
-<!ENTITY version   "2018.09.16a">
-<!ENTITY md5       "d33634df91578c4139cd4611e563e4ed">
+<!ENTITY version   "2018.09.16b">
+<!ENTITY md5       "79115fb9920b10d551292ddc2f27b7ef">
 <!ENTITY launch    "Settings/UnraidNVIDIA">
 <!ENTITY plugdir   "/usr/local/emhttp/plugins/&name;">
 <!ENTITY github    "CHBMB/Unraid-NVIDIA-Plugin">

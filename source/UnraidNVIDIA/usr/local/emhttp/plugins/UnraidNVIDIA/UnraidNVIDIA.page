@@ -211,7 +211,7 @@ $(function()
 				<?if ($nvidiadriver==""):?>
 					<td style="color:red"><b>No Card and/or Drivers</b></td>
 				<?else:?>
-					<td style="color:red"><b><?=`echo $nvidiadriver`?></b></td>
+					<td style="color:red"><b><?=`echo $gfx2`?></b></td>
                 		<?endif;?>
 			</tr>
 

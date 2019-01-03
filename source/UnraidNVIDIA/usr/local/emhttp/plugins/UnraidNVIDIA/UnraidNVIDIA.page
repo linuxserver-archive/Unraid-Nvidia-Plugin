@@ -185,7 +185,7 @@ $(function()
 					<td style="color:red"><b>No Card and/or Drivers</b></td>
 				<?else:?>
 					<td style="color:red"><b><?=`echo $gfx1`?></b></td>
-        <?endif;?>
+				<?endif;?>
 			</tr>
 
 			<tr>
@@ -194,7 +194,7 @@ $(function()
 					<td style="color:red"><b></b></td>
 				<?else:?>
 					<td style="color:red"><b><?=`echo $drivers1`?> v<?=$nvidiadriver?></b></td>
-        <?endif;?>
+				<?endif;?>
 			</tr>
 
 			<tr>
@@ -203,7 +203,7 @@ $(function()
 					<td style="color:red"><b></b></td>
 				<?else:?>
 					<td style="color:red"><b><?=`echo $modules1`?></b></td>
-        <?endif;?>
+				<?endif;?>
 			</tr>
 
 			<tr>
@@ -212,7 +212,7 @@ $(function()
 					<td style="color:red"><b>No Card and/or Drivers</b></td>
 				<?else:?>
 					<td style="color:red"><b><?=`echo $gfx2`?></b></td>
-        <?endif;?>
+				<?endif;?>
 			</tr>
 
 			<tr>
@@ -221,7 +221,7 @@ $(function()
 					<td style="color:red"><b></b></td>
 				<?else:?>
 					<td style="color:red"><b><?=`echo $drivers2`?> v<?=$nvidiadriver?></b></td>
-        <?endif;?>
+				<?endif;?>
 			</tr>
 
 			<tr>
@@ -230,7 +230,7 @@ $(function()
 					<td style="color:red"><b></b></td>
 				<?else:?>
 					<td style="color:red"><b><?=`echo $modules2`?></b></td>
-        <?endif;?>
+				<?endif;?>
 			</tr>
 
 			<tr>
@@ -267,7 +267,7 @@ $(function()
 					<td style="color:red"><b></b></td>
 				<?else:?>
 					<td style="color:red"><b><?=`echo $drivers3`?> v<?=$nvidiadriver?></b></td>
-        <?endif;?>
+				<?endif;?>
 			</tr>
 
 			<tr>
@@ -276,7 +276,7 @@ $(function()
 					<td style="color:red"><b></b></td>
 				<?else:?>
 					<td style="color:red"><b><?=`echo $modules3`?></b></td>
-        <?endif;?>
+				<?endif;?>
 			</tr>
 
 			<tr>
@@ -294,7 +294,7 @@ $(function()
 					<td style="color:red"><b></b></td>
 				<?else:?>
 					<td style="color:red"><b><?=`echo $drivers4`?> v<?=$nvidiadriver?></b></td>
-        <?endif;?>
+				<?endif;?>
 			</tr>
 
 			<tr>
@@ -303,7 +303,7 @@ $(function()
 					<td style="color:red"><b></b></td>
 				<?else:?>
 					<td style="color:red"><b><?=`echo $modules4`?></b></td>
-        <?endif;?>
+				<?endif;?>
 			</tr>
 
 			<tr>

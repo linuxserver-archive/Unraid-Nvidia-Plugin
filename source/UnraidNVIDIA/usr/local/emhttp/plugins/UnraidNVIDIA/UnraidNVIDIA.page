@@ -181,56 +181,56 @@ $(function()
 
 			<tr>
 				<td>Graphics Card 1:</td>
-				<?if ($gfx1==""):?>
-					<td style="color:red"><b>No Card and/or Drivers</b></td>
-				<?else:?>
-					<td style="color:red"><b><?=`echo $gfx1`?></b></td>
+					<?if ($gfx1==""):?>
+						<td style="color:red"><b>No Card and/or Drivers</b></td>
+					<?else:?>
+						<td style="color:red"><b><?=`echo $gfx1`?></b></td>
 				<?endif;?>
 			</tr>
 
 			<tr>
 				<td>Kernel Drivers 1:</td>
-				<?if ($drivers1==""):?>
-					<td style="color:red"><b></b></td>
-				<?else:?>
-					<td style="color:red"><b><?=`echo $drivers1`?> v<?=$nvidiadriver?></b></td>
-				<?endif;?>
+					<?if ($drivers1==""):?>
+						<td style="color:red"><b></b></td>
+					<?else:?>
+						<td style="color:red"><b><?=`echo $drivers1`?> v<?=$nvidiadriver?></b></td>
+					<?endif;?>
 			</tr>
 
 			<tr>
 				<td>Kernel Modules 1:</td>
-				<?if ($modules1==""):?>
-					<td style="color:red"><b></b></td>
-				<?else:?>
-					<td style="color:red"><b><?=`echo $modules1`?></b></td>
-				<?endif;?>
+					<?if ($modules1==""):?>
+						<td style="color:red"><b></b></td>
+					<?else:?>
+						<td style="color:red"><b><?=`echo $modules1`?></b></td>
+					<?endif;?>
 			</tr>
 
 			<tr>
 				<td>Graphics Card 2:</td>
-				<?if ($gfx2==""):?>
-					<td style="color:red"><b>No Card and/or Drivers</b></td>
-				<?else:?>
-					<td style="color:red"><b><?=`echo $gfx2`?></b></td>
-				<?endif;?>
+					<?if ($gfx2==""):?>
+						<td style="color:red"><b>No Card and/or Drivers</b></td>
+					<?else:?>
+						<td style="color:red"><b><?=`echo $gfx2`?></b></td>
+					<?endif;?>
 			</tr>
 
 			<tr>
 				<td>Kernel Drivers 2:</td>
-				<?if ($drivers2==""):?>
-					<td style="color:red"><b></b></td>
-				<?else:?>
-					<td style="color:red"><b><?=`echo $drivers2`?> v<?=$nvidiadriver?></b></td>
-				<?endif;?>
+					<?if ($drivers2==""):?>
+						<td style="color:red"><b></b></td>
+					<?else:?>
+						<td style="color:red"><b><?=`echo $drivers2`?> v<?=$nvidiadriver?></b></td>
+					<?endif;?>
 			</tr>
 
 			<tr>
 				<td>Kernel Modules 2:</td>
-				<?if ($modules2==""):?>
-					<td style="color:red"><b></b></td>
-				<?else:?>
-					<td style="color:red"><b><?=`echo $modules2`?></b></td>
-				<?endif;?>
+					<?if ($modules2==""):?>
+						<td style="color:red"><b></b></td>
+					<?else:?>
+						<td style="color:red"><b><?=`echo $modules2`?></b></td>
+					<?endif;?>
 			</tr>
 
 			<tr>
@@ -254,56 +254,56 @@ $(function()
 
 			<tr>
 				<td>Graphics Card 3:</td>
-				<?if ($gfx3==""):?>
-					<td style="color:red"><b>No Card and/or Drivers</b></td>
-				<?else:?>
-					<td style="color:red"><b><?=`echo $gfx3`?></b></td>
-        <?endif;?>
+					<?if ($gfx3==""):?>
+						<td style="color:red"><b>No Card and/or Drivers</b></td>
+					<?else:?>
+						<td style="color:red"><b><?=`echo $gfx3`?></b></td>
+      	  <?endif;?>
 			</tr>
 
 			<tr>
 				<td>Kernel Drivers 3:</td>
-				<?if ($drivers3==""):?>
-					<td style="color:red"><b></b></td>
-				<?else:?>
-					<td style="color:red"><b><?=`echo $drivers3`?> v<?=$nvidiadriver?></b></td>
-				<?endif;?>
+					<?if ($drivers3==""):?>
+						<td style="color:red"><b></b></td>
+					<?else:?>
+						<td style="color:red"><b><?=`echo $drivers3`?> v<?=$nvidiadriver?></b></td>
+					<?endif;?>
 			</tr>
 
 			<tr>
 				<td>Kernel Modules 3:</td>
-				<?if ($modules3==""):?>
-					<td style="color:red"><b></b></td>
-				<?else:?>
-					<td style="color:red"><b><?=`echo $modules3`?></b></td>
-				<?endif;?>
+					<?if ($modules3==""):?>
+						<td style="color:red"><b></b></td>
+					<?else:?>
+						<td style="color:red"><b><?=`echo $modules3`?></b></td>
+					<?endif;?>
 			</tr>
 
 			<tr>
 				<td>Graphics Card 4:</td>
-				<?if ($gfx4==""):?>
-					<td style="color:red"><b>No Card and/or Drivers</b></td>
-				<?else:?>
-					<td style="color:red"><b><?=`echo $gfx4`?></b></td>
-        <?endif;?>
+					<?if ($gfx4==""):?>
+						<td style="color:red"><b>No Card and/or Drivers</b></td>
+					<?else:?>
+						<td style="color:red"><b><?=`echo $gfx4`?></b></td>
+					<?endif;?>
 			</tr>
 
 			<tr>
 				<td>Kernel Drivers 4:</td>
-				<?if ($drivers4==""):?>
-					<td style="color:red"><b></b></td>
-				<?else:?>
-					<td style="color:red"><b><?=`echo $drivers4`?> v<?=$nvidiadriver?></b></td>
-				<?endif;?>
+					<?if ($drivers4==""):?>
+						<td style="color:red"><b></b></td>
+					<?else:?>
+						<td style="color:red"><b><?=`echo $drivers4`?> v<?=$nvidiadriver?></b></td>
+					<?endif;?>
 			</tr>
 
 			<tr>
 				<td>Kernel Modules 4:</td>
-				<?if ($modules4==""):?>
-					<td style="color:red"><b></b></td>
-				<?else:?>
-					<td style="color:red"><b><?=`echo $modules4`?></b></td>
-				<?endif;?>
+					<?if ($modules4==""):?>
+						<td style="color:red"><b></b></td>
+					<?else:?>
+						<td style="color:red"><b><?=`echo $modules4`?></b></td>
+					<?endif;?>
 			</tr>
 
 			<tr>

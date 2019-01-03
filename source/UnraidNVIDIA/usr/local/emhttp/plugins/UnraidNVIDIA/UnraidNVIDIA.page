@@ -12,7 +12,7 @@ Title="Unraid NVIDIA"
 </a></div>
 
 <?
-/* CHBMB & Squid */
+/* CHBMB, Bassrock & Squid */
 
 #Unraid Version
 $version = parse_ini_file("/etc/unraid-version");

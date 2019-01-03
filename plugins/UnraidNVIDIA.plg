@@ -2,8 +2,8 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "UnraidNVIDIA">
 <!ENTITY author    "LinuxServer.io">
-<!ENTITY version   "2018.09.16g">
-<!ENTITY md5       "553a60575dab298a12fbb0d79624e99c">
+<!ENTITY version   "2019.01.03">
+<!ENTITY md5       "86361b131cbf20a4e6d448db1e8c542e">
 <!ENTITY launch    "Settings/UnraidNVIDIA">
 <!ENTITY plugdir   "/usr/local/emhttp/plugins/&name;">
 <!ENTITY github    "CHBMB/Unraid-NVIDIA-Plugin">
@@ -13,6 +13,9 @@
 <PLUGIN name="&name;" author="&author;" version="&version;" launch="&launch;" pluginURL="&pluginURL;">
 
 <CHANGES>
+###2019-01-03
+- Release ready.
+
 ###2018-09-16f
 - Initial internal release.
 </CHANGES>

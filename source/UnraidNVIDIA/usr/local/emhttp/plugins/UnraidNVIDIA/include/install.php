@@ -60,23 +60,23 @@ download($downloadURL."/bzroot","/tmp/mediabuild/bzroot",$error);
 download($downloadURL."/bzroot-gui","/tmp/mediabuild/bzroot-gui",$error);
 download($downloadURL."/bzmodules","/tmp/mediabuild/bzmodules",$error);
 download($downloadURL."/bzfirmware","/tmp/mediabuild/bzfirmware",$error);
-download($downloadURL."/bzimage.md5","/tmp/mediabuild/bzimage.md5",$error);
-download($downloadURL."/bzroot.md5","/tmp/mediabuild/bzroot.md5",$error);
-download($downloadURL."/bzroot-gui.md5","/tmp/mediabuild/bzroot-gui.md5",$error);
-download($downloadURL."/bzmodules.md5","/tmp/mediabuild/bzmodules.md5",$error);
-download($downloadURL."/bzfirmware.md5","/tmp/mediabuild/bzfirmware.md5",$error);
+download($downloadURL."/bzimage.sha256","/tmp/mediabuild/bzimage.sha256",$error);
+download($downloadURL."/bzroot.sha256","/tmp/mediabuild/bzroot.sha256",$error);
+download($downloadURL."/bzroot-gui.sha256","/tmp/mediabuild/bzroot-gui.sha256",$error);
+download($downloadURL."/bzmodules.sha256","/tmp/mediabuild/bzmodules.sha256",$error);
+download($downloadURL."/bzfirmware.sha256","/tmp/mediabuild/bzfirmware.sha256",$error);
 
 echo "\n";
 
-$bzimageMD5 = explode(" ",file_get_contents("/tmp/mediabuild/bzimage.md5"));
-$bzrootMD5 = explode(" ",file_get_contents("/tmp/mediabuild/bzroot.md5"));
-$bzroot_guiMD5 = explode(" ",file_get_contents("/tmp/mediabuild/bzroot-gui.md5"));
-$bzmodulesMD5 = explode(" ",file_get_contents("/tmp/mediabuild/bzmodules.md5"));
-$bzfirmwareMD5 = explode(" ",file_get_contents("/tmp/mediabuild/bzfirmware.md5"));
+$bzimageSHA256 = explode(" ",file_get_contents("/tmp/mediabuild/bzimage.sha256"));
+$bzrootSHA256 = explode(" ",file_get_contents("/tmp/mediabuild/bzroot.sha256"));
+$bzroot_guiSHA256 = explode(" ",file_get_contents("/tmp/mediabuild/bzroot-gui.sha256"));
+$bzmodulesSHA256 = explode(" ",file_get_contents("/tmp/mediabuild/bzmodules.sha256"));
+$bzfirmwareSHA256 = explode(" ",file_get_contents("/tmp/mediabuild/bzfirmware.sha256"));
 
-echo "Checking MD5's: ";
+echo "Checking SHA 256's: ";
 
-if ( md5_file("/tmp/mediabuild/bzimage") != $bzimageMD5[0] || md5_file("/tmp/mediabuild/bzroot") != $bzrootMD5[0]  || md5_file("/tmp/mediabuild/bzroot-gui") != $bzroot_guiMD5[0]  || md5_file("/tmp/mediabuild/bzmodules") != $bzmodulesMD5[0]  || md5_file("/tmp/mediabuild/bzfirmware") != $bzfirmwareMD5[0] ) {
+if ( hash_file("sha256", "/tmp/mediabuild/bzimage") != $bzimageSHA256[0] || hash_file("sha256", "/tmp/mediabuild/bzroot") != $bzrootSHA256[0]  || hash_file("sha256", "/tmp/mediabuild/bzroot-gui") != $bzroot_guiSHA256[0]  || hash_file("sha256", "/tmp/mediabuild/bzmodules") != $bzmodulesSHA256[0]  || hash_file("sha256", "/tmp/mediabuild/bzfirmware") != $bzfirmwareSHA256[0] ) {
   echo "failed!\n\n";
   exit(1);
 } else {

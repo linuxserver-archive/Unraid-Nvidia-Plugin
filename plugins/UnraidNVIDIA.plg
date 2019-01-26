@@ -3,7 +3,7 @@
 <!ENTITY name      "UnraidNVIDIA">
 <!ENTITY author    "LinuxServer.io">
 <!ENTITY version   "2019.01.26">
-<!ENTITY md5       "ce8d66ee8b4148ae996081e6adac171c">
+<!ENTITY md5       "47fe5f086741ef30a6f4c05d24eea42a">
 <!ENTITY launch    "Settings/UnraidNVIDIA">
 <!ENTITY plugdir   "/usr/local/emhttp/plugins/&name;">
 <!ENTITY github    "CHBMB/Unraid-NVIDIA-Plugin">

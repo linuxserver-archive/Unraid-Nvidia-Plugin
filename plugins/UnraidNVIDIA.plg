@@ -2,8 +2,8 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "UnraidNVIDIA">
 <!ENTITY author    "LinuxServer.io">
-<!ENTITY version   "2019.01.26">
-<!ENTITY md5       "47fe5f086741ef30a6f4c05d24eea42a">
+<!ENTITY version   "2019.01.26a">
+<!ENTITY md5       "1878289c976d7b64e948e301a2bd09bc">
 <!ENTITY launch    "Settings/UnraidNVIDIA">
 <!ENTITY plugdir   "/usr/local/emhttp/plugins/&name;">
 <!ENTITY github    "CHBMB/Unraid-NVIDIA-Plugin">
@@ -13,6 +13,9 @@
 <PLUGIN name="&name;" author="&author;" version="&version;" launch="&launch;" pluginURL="&pluginURL;">
 
 <CHANGES>
+###2019-01-26a
+- Change to SHA256
+
 ###2019-01-26
 - V6.7.0rc2 uploaded
 - V6.7.0rc1 uploaded

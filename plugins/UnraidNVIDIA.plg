@@ -6,7 +6,7 @@
 <!ENTITY md5       "1878289c976d7b64e948e301a2bd09bc">
 <!ENTITY launch    "Settings/UnraidNVIDIA">
 <!ENTITY plugdir   "/usr/local/emhttp/plugins/&name;">
-<!ENTITY github    "CHBMB/Unraid-NVIDIA-Plugin">
+<!ENTITY github    "linuxserver/Unraid-NVIDIA-Plugin">
 <!ENTITY pluginURL "https://raw.githubusercontent.com/&github;/master/plugins/&name;.plg">
 ]>
 

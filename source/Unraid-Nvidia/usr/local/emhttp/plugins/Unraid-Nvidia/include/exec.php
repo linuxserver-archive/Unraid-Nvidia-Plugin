@@ -1,5 +1,5 @@
 <?PHP
-require_once("/usr/local/emhttp/plugins/UnraidNVIDIA/include/xmlHelpers.php");
+require_once("/usr/local/emhttp/plugins/Unraid-Nvidia/include/xmlHelpers.php");
 
 function download_url($url, $path = "", $bg = false, $timeout=45){
 	if ( ! strpos($url,"?") ) {
@@ -34,7 +34,7 @@ case 'show_description':
 
 #Sets Text to be displayed in Dropdown Menu
 case 'build_buttons':
-  $types['nvidia']             = "NVIDIA";
+  $types['nvidia']             = "Nvidia";
   $types['stock']              = "unRaid";
 
   $tempFile = $mediaPaths['tempFiles']."/temp";
@@ -58,7 +58,7 @@ foreach (array_keys($folder) as $path) {
 	if ( ! strpos($tmpArray['imageURL'],"stock") ) {
 		download_url($tmpArray['imageURL']."/unraid-media",$description);
     $tempVar = parse_ini_file($description);
-	  $tmpArray['imageDescription'] = "This will install the ".$tempVar['base']." Unraid NVIDIA build with v".$tempVar['driver']. " drivers";
+	  $tmpArray['imageDescription'] = "This will install the ".$tempVar['base']." Unraid Nvidia build with v".$tempVar['driver']. " drivers";
   } else {
     $tmpArray['imageDescription'] = "This will install stock Unraid";
 	}
@@ -104,7 +104,7 @@ foreach (array_keys($folder) as $path) {
     if ( $button['name'] == "unRaid" ) {
       $o .= "Stock Unraid Builds: <select id='unRaid' onchange='showDescription0(value);'>";
     } else {
-      $o .= "NVIDIA Unraid Builds: <select id='Media' onchange='showDescription1(value);'>";
+      $o .= "Nvidia Unraid Builds: <select id='Media' onchange='showDescription1(value);'>";
     }
 
     $o .= "<option value='default' disabled selected>Select an image to install</option>";

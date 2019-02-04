@@ -1,14 +1,14 @@
 Menu="Utilities"
-Icon="UnraidNVIDIA.png"
-Title="Unraid NVIDIA"
+Icon="Unraid-Nvidia.png"
+Title="Unraid Nvidia"
 ---
 
 <div align="center"><a href="https://www.linuxserver.io/" target="_blank">
-<img src="/plugins/UnraidNVIDIA/images/linuxserver.png">
+<img src="/plugins/Unraid-Nvidia/images/linuxserver.png">
 </a></div>
 
 <div align="center"><a href="https://www.linuxserver.io/donate/" target="_blank">
-<img src="/plugins/UnraidNVIDIA/images/donate.png">
+<img src="/plugins/Unraid-Nvidia/images/donate.png">
 </a></div>
 
 <?
@@ -18,9 +18,9 @@ Title="Unraid NVIDIA"
 $version = parse_ini_file("/etc/unraid-version");
 $unRaidVersion = $version['version'];
 
-$installedVersion = exec("/usr/local/emhttp/plugins/dynamix.plugin.manager/scripts/plugin version /var/log/plugins/UnraidNVIDIA.plg");
-if ( is_file("/tmp/plugins/UnraidNVIDIA.plg") ) {
-  $upgradeVersion = exec("/usr/local/emhttp/plugins/dynamix.plugin.manager/scripts/plugin version /tmp/plugins/UnraidNVIDIA.plg");
+$installedVersion = exec("/usr/local/emhttp/plugins/dynamix.plugin.manager/scripts/plugin version /var/log/plugins/Unraid-Nvidia.plg");
+if ( is_file("/tmp/plugins/Unraid-Nvidia.plg") ) {
+  $upgradeVersion = exec("/usr/local/emhttp/plugins/dynamix.plugin.manager/scripts/plugin version /tmp/plugins/Unraid-Nvidia.plg");
 } else {
   $upgradeVersion = "0";
 }
@@ -35,7 +35,7 @@ $reboot = (is_file("/tmp/mediabuild/reboot")) ? "true" : "false";
 
 <script>
 
-var URL = "/plugins/UnraidNVIDIA/include/exec.php";
+var URL = "/plugins/Unraid-Nvidia/include/exec.php";
 
 function showDescription0(build)
 {
@@ -84,7 +84,7 @@ function installBuild()
   },
   function()
   {
-    openBox("/plugins/UnraidNVIDIA/include/install.sh&arg1="+selected,"Installing "+selectedText,500,500);
+    openBox("/plugins/Unraid-Nvidia/include/install.sh&arg1="+selected,"Installing "+selectedText,500,500);
     setInterval(function() {
       checkReboot();
     }, 1000);
@@ -112,9 +112,9 @@ $(function()
   }
 
   swal({
-    title: "Unraid NVIDIA",
+    title: "Unraid Nvidia",
     text:  "Updating available builds",
-	imageUrl: "/plugins/UnraidNVIDIA/images/linuxserver.png",
+	imageUrl: "/plugins/Unraid-Nvidia/images/linuxserver.png",
 	imageSize: "300x62",
 	showConfirmButton: false,
     showCancelButton: false
@@ -136,7 +136,7 @@ $(function()
 <!-- Upgrade Notification-->
 <br><br>
 <div align="center">
-<div id='upgradeAvailable' hidden><font color='red'>An update to UnraidNVIDIA is Available</font></div>
+<div id='upgradeAvailable' hidden><font color='red'>An update to Unraid Nvidia is Available</font></div>
 </div>
 <!-- Download & Install Button-->
 <div align="center">
@@ -163,47 +163,51 @@ $(function()
     	<table class="settings">
 
 			<tr>
+				<td><b><font size="+1">INFO</font></b></td>
+			</tr>
+
+			<tr>
 				<td>Nvidia Driver Version:</td>
 						<td style="color:red"><b><?=$nvidiadriver?></b></td>
 			</tr>
 
 			<tr>
-				<td>Graphics Card 0:</td>
+				<td>GPU 0:</td>
 						<td style="color:red"><b><?=`sed -n 1p /tmp/nvidia`?></b></td>
 			</tr>
 
 			<tr>
-				<td>Graphics Card 0 UUID:</td>
+				<td>GPU 0 UUID:</td>
 						<td style="color:red"><b><?=`sed -n 2p /tmp/nvidia`?></b></td>
 			</tr>
 
 			<tr>
-				<td>Graphics Card 1:</td>
+				<td>GPU 1:</td>
 						<td style="color:red"><b><?=`sed -n 3p /tmp/nvidia`?></b></td>
 			</tr>
 
 			<tr>
-				<td>Graphics Card 1 UUID:</td>
+				<td>GPU 1 UUID:</td>
 						<td style="color:red"><b><?=`sed -n 4p /tmp/nvidia`?></b></td>
 			</tr>
 
 			<tr>
-				<td>Graphics Card 2:</td>
+				<td>GPU 2:</td>
 						<td style="color:red"><b><?=`sed -n 5p /tmp/nvidia`?></b></td>
 			</tr>
 
 			<tr>
-				<td>Graphics Card 2 UUID:</td>
+				<td>GPU 2 UUID:</td>
 						<td style="color:red"><b><?=`sed -n 6p /tmp/nvidia`?></b></td>
 			</tr>
 
 			<tr>
-				<td>Graphics Card 3:</td>
+				<td>GPU 3:</td>
 						<td style="color:red"><b><?=`sed -n 7p /tmp/nvidia`?></b></td>
 			</tr>
 
 			<tr>
-				<td>Graphics Card 3 UUID:</td>
+				<td>GPU 3 UUID:</td>
 						<td style="color:red"><b><?=`sed -n 8p /tmp/nvidia`?></b></td>
 			</tr>
 
@@ -220,7 +224,15 @@ $(function()
 <table class="settings">
 
 			<tr>
-				<td><a href="https://forums.unraid.net/" style="color:red"target="_blank"><b>Unraid NVIDIA Support Thread</b></a></td>
+				<td><b><font size="+1">USEFUL LINKS</font></b></td>
+			</tr>
+
+			<tr>
+				<td><a href="https://forums.unraid.net/" style="color:red"target="_blank"><b>Unraid Nvidia Support Thread</b></a></td>
+			</tr>
+
+			<tr>
+				<td><a href="https://forums.unraid.net/topic/" style="color:red"target="_blank"><b>How to use your GPU in a container</b></a></td>
 			</tr>
 
 			<tr>
@@ -234,5 +246,18 @@ $(function()
 			<tr>
 				<td><a href="https://discord.gg/YWrKVTn" style="color:red"target="_blank"><b>LinuxServer.io Discord</b></a></td>
 			</tr>
-   </table>
+
+			<tr>
+				<td><a href="https://www.nvidia.com/object/linux-amd64-display-archive.html" style="color:red"target="_blank"><b>Linux Nvidia Drivers (check your card is supported here, you have <?=$nvidiadriver?> currently installed.)</b></a></td>
+			</tr>
+
+			<tr>
+				<td><a href="https://github.com/nvidia/nvidia-container-runtime#nvidia_visible_devices" style="color:red"target="_blank"><b>Read about using the <b>NVIDIA_VISIBLE_DEVICES</b> variable</b></a></td>
+			</tr>
+
+			<tr>
+				<td><a href="https://github.com/nvidia/nvidia-container-runtime#nvidia_driver_capabilities" style="color:red"target="_blank"><b>Read about using the <b>NVIDIA_DRIVER_CAPABILITIES</b> variable</b></a></td>
+			</tr>
+
+  </table>
 </div>

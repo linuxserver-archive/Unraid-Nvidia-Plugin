@@ -1,18 +1,21 @@
 <?xml version='1.0' standalone='yes'?>
 <!DOCTYPE PLUGIN [
-<!ENTITY name      "UnraidNVIDIA">
+<!ENTITY name      "Unraid-Nvidia">
 <!ENTITY author    "LinuxServer.io">
-<!ENTITY version   "2019.01.26a">
-<!ENTITY md5       "1878289c976d7b64e948e301a2bd09bc">
-<!ENTITY launch    "Settings/UnraidNVIDIA">
+<!ENTITY version   "2019.02.04">
+<!ENTITY md5       "6f84c8fe4f51396daed05a45bc9199e1">
+<!ENTITY launch    "Settings/Unraid-NVIDIA">
 <!ENTITY plugdir   "/usr/local/emhttp/plugins/&name;">
-<!ENTITY github    "linuxserver/Unraid-NVIDIA-Plugin">
+<!ENTITY github    "linuxserver/Unraid-Nvidia-Plugin">
 <!ENTITY pluginURL "https://raw.githubusercontent.com/&github;/master/plugins/&name;.plg">
 ]>
 
 <PLUGIN name="&name;" author="&author;" version="&version;" launch="&launch;" pluginURL="&pluginURL;">
 
 <CHANGES>
+###2019-02-04
+- Change to plugin page
+
 ###2019-01-26a
 - Change to SHA256
 
@@ -33,7 +36,7 @@
   {
     echo "********************************************************************\n";
     echo "\n";
-    echo "Unraid NVIDIA Plugin Requires unRaid version 6.6 or greater to run\n";
+    echo "Unraid Nvidia Plugin Requires unRaid version 6.6 or greater to run\n";
     echo "\n";
     echo "********************************************************************\n";
     exit(1);

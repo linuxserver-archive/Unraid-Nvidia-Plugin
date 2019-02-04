@@ -30,23 +30,6 @@ $nvidia = (is_file("/lib/firmware/unraid-media")) ? parse_ini_file("/lib/firmwar
 $nvidiadriver = $nvidia['driver'];
 $reboot = (is_file("/tmp/mediabuild/reboot")) ? "true" : "false";
 
-#Detect Cards
-$gfx1 = shell_exec ( "cat /tmp/nvidia/gfx1" );
-$gfx2 = shell_exec ( "cat /tmp/nvidia/gfx2" );
-$gfx3 = shell_exec ( "cat /tmp/nvidia/gfx3" );
-$gfx4 = shell_exec ( "cat /tmp/nvidia/gfx4" );
-
-#Detect Kernel Drivers
-$drivers1 = shell_exec ( "cat /tmp/nvidia/drivers1" );
-$drivers2 = shell_exec ( "cat /tmp/nvidia/drivers2" );
-$drivers3 = shell_exec ( "cat /tmp/nvidia/drivers3" );
-$drivers4 = shell_exec ( "cat /tmp/nvidia/drivers4" );
-
-#Detect Kernel Modules
-$modules1 = shell_exec ( "cat /tmp/nvidia/modules1" );
-$modules2 = shell_exec ( "cat /tmp/nvidia/modules2" );
-$modules3 = shell_exec ( "cat /tmp/nvidia/modules3" );
-$modules4 = shell_exec ( "cat /tmp/nvidia/modules4" );
 ?>
 
 
@@ -180,66 +163,50 @@ $(function()
     	<table class="settings">
 
 			<tr>
+				<td>Nvidia Driver Version:</td>
+						<td style="color:red"><b><?=$nvidiadriver?></b></td>
+			</tr>
+
+			<tr>
+				<td>Graphics Card 0:</td>
+						<td style="color:red"><b><?=`sed -n 1p /tmp/nvidia`?></b></td>
+			</tr>
+
+			<tr>
+				<td>Graphics Card 0 UUID:</td>
+						<td style="color:red"><b><?=`sed -n 2p /tmp/nvidia`?></b></td>
+			</tr>
+
+			<tr>
 				<td>Graphics Card 1:</td>
-					<?if ($gfx1==""):?>
-						<td style="color:red"><b>No Card and/or Drivers</b></td>
-					<?else:?>
-						<td style="color:red"><b><?=`echo $gfx1`?></b></td>
-				<?endif;?>
+						<td style="color:red"><b><?=`sed -n 3p /tmp/nvidia`?></b></td>
 			</tr>
 
 			<tr>
-				<td>Kernel Drivers 1:</td>
-					<?if ($drivers1==""):?>
-						<td style="color:red"><b></b></td>
-					<?else:?>
-						<td style="color:red"><b><?=`echo $drivers1`?> v<?=$nvidiadriver?></b></td>
-					<?endif;?>
-			</tr>
-
-			<tr>
-				<td>Kernel Modules 1:</td>
-					<?if ($modules1==""):?>
-						<td style="color:red"><b></b></td>
-					<?else:?>
-						<td style="color:red"><b><?=`echo $modules1`?></b></td>
-					<?endif;?>
+				<td>Graphics Card 1 UUID:</td>
+						<td style="color:red"><b><?=`sed -n 4p /tmp/nvidia`?></b></td>
 			</tr>
 
 			<tr>
 				<td>Graphics Card 2:</td>
-					<?if ($gfx2==""):?>
-						<td style="color:red"><b>No Card and/or Drivers</b></td>
-					<?else:?>
-						<td style="color:red"><b><?=`echo $gfx2`?></b></td>
-					<?endif;?>
+						<td style="color:red"><b><?=`sed -n 5p /tmp/nvidia`?></b></td>
 			</tr>
 
 			<tr>
-				<td>Kernel Drivers 2:</td>
-					<?if ($drivers2==""):?>
-						<td style="color:red"><b></b></td>
-					<?else:?>
-						<td style="color:red"><b><?=`echo $drivers2`?> v<?=$nvidiadriver?></b></td>
-					<?endif;?>
+				<td>Graphics Card 2 UUID:</td>
+						<td style="color:red"><b><?=`sed -n 6p /tmp/nvidia`?></b></td>
 			</tr>
 
 			<tr>
-				<td>Kernel Modules 2:</td>
-					<?if ($modules2==""):?>
-						<td style="color:red"><b></b></td>
-					<?else:?>
-						<td style="color:red"><b><?=`echo $modules2`?></b></td>
-					<?endif;?>
+				<td>Graphics Card 3:</td>
+						<td style="color:red"><b><?=`sed -n 7p /tmp/nvidia`?></b></td>
 			</tr>
 
 			<tr>
-				<td><a href="https://forums.unraid.net/" style="color:red"target="_blank"><b>Unraid NVIDIA Support Thread</b></a></td>
+				<td>Graphics Card 3 UUID:</td>
+						<td style="color:red"><b><?=`sed -n 8p /tmp/nvidia`?></b></td>
 			</tr>
 
-			<tr>
-				<td><a href="https://github.com/linuxserver" style="color:red"target="_blank"><b>LinuxServer.io Github</b></a></td>
-			</tr>
 	</table>
 
 </div>
@@ -253,61 +220,15 @@ $(function()
 <table class="settings">
 
 			<tr>
-				<td>Graphics Card 3:</td>
-					<?if ($gfx3==""):?>
-						<td style="color:red"><b>No Card and/or Drivers</b></td>
-					<?else:?>
-						<td style="color:red"><b><?=`echo $gfx3`?></b></td>
-      	  <?endif;?>
-			</tr>
-
-			<tr>
-				<td>Kernel Drivers 3:</td>
-					<?if ($drivers3==""):?>
-						<td style="color:red"><b></b></td>
-					<?else:?>
-						<td style="color:red"><b><?=`echo $drivers3`?> v<?=$nvidiadriver?></b></td>
-					<?endif;?>
-			</tr>
-
-			<tr>
-				<td>Kernel Modules 3:</td>
-					<?if ($modules3==""):?>
-						<td style="color:red"><b></b></td>
-					<?else:?>
-						<td style="color:red"><b><?=`echo $modules3`?></b></td>
-					<?endif;?>
-			</tr>
-
-			<tr>
-				<td>Graphics Card 4:</td>
-					<?if ($gfx4==""):?>
-						<td style="color:red"><b>No Card and/or Drivers</b></td>
-					<?else:?>
-						<td style="color:red"><b><?=`echo $gfx4`?></b></td>
-					<?endif;?>
-			</tr>
-
-			<tr>
-				<td>Kernel Drivers 4:</td>
-					<?if ($drivers4==""):?>
-						<td style="color:red"><b></b></td>
-					<?else:?>
-						<td style="color:red"><b><?=`echo $drivers4`?> v<?=$nvidiadriver?></b></td>
-					<?endif;?>
-			</tr>
-
-			<tr>
-				<td>Kernel Modules 4:</td>
-					<?if ($modules4==""):?>
-						<td style="color:red"><b></b></td>
-					<?else:?>
-						<td style="color:red"><b><?=`echo $modules4`?></b></td>
-					<?endif;?>
+				<td><a href="https://forums.unraid.net/" style="color:red"target="_blank"><b>Unraid NVIDIA Support Thread</b></a></td>
 			</tr>
 
 			<tr>
 				<td><a href="https://www.linuxserver.io/our-images" style="color:red"target="_blank"><b>LinuxServer.io</b></a></td>
+			</tr>
+
+			<tr>
+				<td><a href="https://github.com/linuxserver" style="color:red"target="_blank"><b>LinuxServer.io Github</b></a></td>
 			</tr>
 
 			<tr>

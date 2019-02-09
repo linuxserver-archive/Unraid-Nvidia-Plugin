@@ -172,43 +172,43 @@ $(function()
 			</tr>
 
 			<tr>
-				<td>GPU 0:</td>
-						<td style="color:red"><b><?=`sed -n 1p /tmp/nvidia`?></b></td>
+				<td>GPU 0 Model &amp Bus:</td>
+						<td style="color:red"><b><?=`sed -n 1p /tmp/nvidia`?>&nbsp&nbsp&nbsp&nbsp&nbsp<?=`sed -n 2p /tmp/nvidia`?></b></td>
 			</tr>
 
 			<tr>
 				<td>GPU 0 UUID:</td>
-						<td style="color:red"><b><?=`sed -n 2p /tmp/nvidia`?></b></td>
-			</tr>
-
-			<tr>
-				<td>GPU 1:</td>
 						<td style="color:red"><b><?=`sed -n 3p /tmp/nvidia`?></b></td>
 			</tr>
 
 			<tr>
+				<td>GPU 1 Model &amp Bus:</td>
+						<td style="color:red"><b><?=`sed -n 4p /tmp/nvidia`?>&nbsp&nbsp&nbsp&nbsp&nbsp<?=`sed -n 5p /tmp/nvidia`?></b></td>
+			</tr>
+
+			<tr>
 				<td>GPU 1 UUID:</td>
-						<td style="color:red"><b><?=`sed -n 4p /tmp/nvidia`?></b></td>
-			</tr>
-
-			<tr>
-				<td>GPU 2:</td>
-						<td style="color:red"><b><?=`sed -n 5p /tmp/nvidia`?></b></td>
-			</tr>
-
-			<tr>
-				<td>GPU 2 UUID:</td>
 						<td style="color:red"><b><?=`sed -n 6p /tmp/nvidia`?></b></td>
 			</tr>
 
 			<tr>
-				<td>GPU 3:</td>
-						<td style="color:red"><b><?=`sed -n 7p /tmp/nvidia`?></b></td>
+				<td>GPU 2 Model &amp Bus:</td>
+						<td style="color:red"><b><?=`sed -n 7p /tmp/nvidia`?>&nbsp&nbsp&nbsp&nbsp&nbsp<?=`sed -n 8p /tmp/nvidia`?></b></td>
+			</tr>
+
+			<tr>
+				<td>GPU 2 UUID:</td>
+						<td style="color:red"><b><?=`sed -n 9p /tmp/nvidia`?></b></td>
+			</tr>
+
+			<tr>
+				<td>GPU 3 Model &amp Bus:</td>
+						<td style="color:red"><b><?=`sed -n 10p /tmp/nvidia`?>&nbsp&nbsp&nbsp&nbsp&nbsp<?=`sed -n 11p /tmp/nvidia`?></b></td>
 			</tr>
 
 			<tr>
 				<td>GPU 3 UUID:</td>
-						<td style="color:red"><b><?=`sed -n 8p /tmp/nvidia`?></b></td>
+						<td style="color:red"><b><?=`sed -n 12p /tmp/nvidia`?></b></td>
 			</tr>
 
 	</table>
@@ -228,11 +228,11 @@ $(function()
 			</tr>
 
 			<tr>
-				<td><a href="https://forums.unraid.net/" style="color:red"target="_blank"><b>Unraid Nvidia Support Thread</b></a></td>
+				<td><a href="https://forums.unraid.net/topic/77813-plugin-linuxserverio-unraid-nvidia/" style="color:red"target="_blank"><b>Unraid Nvidia Support Thread</b></a></td>
 			</tr>
 
 			<tr>
-				<td><a href="https://forums.unraid.net/topic/" style="color:red"target="_blank"><b>How to use your GPU in a container</b></a></td>
+				<td><a href="https://forums.unraid.net/topic/77813-plugin-linuxserverio-unraid-nvidia/?tab=comments#comment-719459" style="color:red"target="_blank"><b>How to use your GPU in a container</b></a></td>
 			</tr>
 
 			<tr>

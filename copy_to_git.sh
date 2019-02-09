@@ -1,7 +1,7 @@
 #!/bin/bash
 
-mkdir -p "/mnt/disk1/github/Unraid-NVIDIA-Plugin/source/UnraidNVIDIA/usr/local/emhttp/plugins/UnraidNVIDIA/"
+mkdir -p "/mnt/cache/downloads/github/Unraid-Nvidia-Plugin/source/UnraidNVIDIA/usr/local/emhttp/plugins/Unraid-Nvidia/"
 
-cp /usr/local/emhttp/plugins/UnraidNVIDIA/* /mnt/disk1/github/Unraid-NVIDIA-Plugin/source/UnraidNVIDIA/usr/local/emhttp/plugins/UnraidNVIDIA/ -R -v
+cp /usr/local/emhttp/plugins/Unraid-Nvidia/* /mnt/cache/downloads/github/Unraid-Nvidia-Plugin/source/Unraid-Nvidia/usr/local/emhttp/plugins/Unraid-Nvidia/ -R -v
 
 

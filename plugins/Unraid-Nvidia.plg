@@ -2,8 +2,8 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "Unraid-Nvidia">
 <!ENTITY author    "LinuxServer.io">
-<!ENTITY version   "2019.02.04">
-<!ENTITY md5       "6f84c8fe4f51396daed05a45bc9199e1">
+<!ENTITY version   "2019.02.09">
+<!ENTITY md5       "3a8e8802a3a7f1b779071fe1e3833dd4">
 <!ENTITY launch    "Settings/Unraid-NVIDIA">
 <!ENTITY plugdir   "/usr/local/emhttp/plugins/&name;">
 <!ENTITY github    "linuxserver/Unraid-Nvidia-Plugin">
@@ -13,16 +13,8 @@
 <PLUGIN name="&name;" author="&author;" version="&version;" launch="&launch;" pluginURL="&pluginURL;">
 
 <CHANGES>
-###2019-02-04
-- Change to plugin page
-
-###2019-01-26a
-- Change to SHA256
-
-###2019-01-26
-- V6.7.0rc2 uploaded
-- V6.7.0rc1 uploaded
-- V6.6.6 uploaded
+###2019-02-09
+- Release
 </CHANGES>
 
 <!-- The 'pre-install' script. -->
@@ -75,7 +67,7 @@ fi
 
 # Parse Nvidia Details
 
-nvidia-smi -L | cut -c8- | sed 's/.$//' | tr -d '(:' | sed 's/UUID /\n/g' > /tmp/nvidia
+nvidia-smi --query-gpu=gpu_name,gpu_bus_id,gpu_uuid --format=csv,noheader | sed -e s/00000000://g | sed 's/\,\ /\n/g' > /tmp/nvidia
 
 echo ""
 echo "----------------------------------------------------"

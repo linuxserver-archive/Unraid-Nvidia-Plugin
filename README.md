@@ -8,6 +8,6 @@ Find us for support at:
 * [Podcast](https://www.linuxserver.io/podcast/) covers everything to do with getting the most from your Linux Server plus a focus on all things Docker and containerisation!
 
 
-**Unraid NVIDIA**
+**Unraid Nvidia**
 
-This plugin from linuxserver.io allows you to easily install a modified Unraid version with Nvidia drivers compiled.
+This plugin from LinuxServer.io allows you to easily install a modified Unraid version with Nvidia drivers compiled.

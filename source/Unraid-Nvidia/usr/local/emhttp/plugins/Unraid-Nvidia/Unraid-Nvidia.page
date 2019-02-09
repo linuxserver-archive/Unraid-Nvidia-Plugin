@@ -252,6 +252,10 @@ $(function()
 			</tr>
 
 			<tr>
+				<td><a href="https://devblogs.nvidia.com/gpu-containers-runtime/" style="color:red"target="_blank"><b>Nvidia Container Runtime project</b></a></td>
+			</tr>
+
+			<tr>
 				<td><a href="https://github.com/nvidia/nvidia-container-runtime#nvidia_visible_devices" style="color:red"target="_blank"><b>Read about using the <b>NVIDIA_VISIBLE_DEVICES</b> variable</b></a></td>
 			</tr>
 

@@ -4,7 +4,7 @@
 <!ENTITY author    "LinuxServer.io">
 <!ENTITY version   "2019.02.09">
 <!ENTITY md5       "3a8e8802a3a7f1b779071fe1e3833dd4">
-<!ENTITY launch    "Settings/Unraid-NVIDIA">
+<!ENTITY launch    "Settings/Unraid-Nvidia">
 <!ENTITY plugdir   "/usr/local/emhttp/plugins/&name;">
 <!ENTITY github    "linuxserver/Unraid-Nvidia-Plugin">
 <!ENTITY pluginURL "https://raw.githubusercontent.com/&github;/master/plugins/&name;.plg">

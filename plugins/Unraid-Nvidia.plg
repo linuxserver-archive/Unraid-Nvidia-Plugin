@@ -10,7 +10,7 @@
 <!ENTITY pluginURL "https://raw.githubusercontent.com/&github;/master/plugins/&name;.plg">
 ]>
 
-<PLUGIN name="&name;" author="&author;" version="&version;" launch="&launch;" pluginURL="&pluginURL;" min="6.6.6" support="https://forums.unraid.net/topic/77813-plugin-linuxserverio-unraid-nvidia/" icon="film"">
+<PLUGIN name="&name;" author="&author;" version="&version;" launch="&launch;" pluginURL="&pluginURL;" min="6.6.6" support="https://forums.unraid.net/topic/77813-plugin-linuxserverio-unraid-nvidia/" icon="film">
 
 <CHANGES>
 ###2019-02-09

@@ -50,7 +50,7 @@ rm -rf /tmp/mediabuild
 The 'source' file.
 -->
 <FILE Name="/boot/config/plugins/&name;/&name;-&version;.txz" Run="upgradepkg --install-new">
-<URL>https://raw.github.com/&github;/master/archive/&name;-&version;.txz</URL>
+<URL>https://raw.githubusercontent.com/&github;/master/archive/&name;-&version;.txz</URL>
 <MD5>&md5;</MD5>
 </FILE>
 

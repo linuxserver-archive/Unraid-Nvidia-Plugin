@@ -35,6 +35,13 @@ $reboot = (is_file("/tmp/mediabuild/reboot")) ? "true" : "false";
 
 <script>
 
+<!-- Upgrade Check-->
+$(function() {
+  if ( typeof caPluginUpdateCheck === "function" ) {
+    caPluginUpdateCheck("Unraid.Nvidia.plg");
+  }
+});
+
 var URL = "/plugins/Unraid-Nvidia/include/exec.php";
 
 function showDescription0(build)

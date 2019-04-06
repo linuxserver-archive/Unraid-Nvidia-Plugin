@@ -84,12 +84,20 @@ if ( hash_file("sha256", "/tmp/mediabuild/bzimage") != $bzimageSHA256[0] || hash
   exit(1);
 } else {
   echo "passed\n\n";
-
+  
+  echo "Copying bzimage to boot drive\n";
   exec("cp /tmp/mediabuild/bzimage /boot/bzimage");
+  echo "Copying bzroot to boot drive\n";
   exec("cp /tmp/mediabuild/bzroot /boot/bzroot");
+  echo "Copying bzroot-gui to boot drive\n";
   exec("cp /tmp/mediabuild/bzroot-gui /boot/bzroot-gui");
+  echo "Copying bzmodules to boot drive\n";
   exec("cp /tmp/mediabuild/bzmodules /boot/bzmodules");
+  echo "Copying bfirmware to boot drive\n\n";
   exec("cp /tmp/mediabuild/bzfirmware /boot/bzfirmware");
+  
+  @unlink("/boot/config/plugins/dynamix.plg");
+  
   echo "You must reboot your server\n\n";
   file_put_contents("/tmp/mediabuild/reboot","reboot");
 

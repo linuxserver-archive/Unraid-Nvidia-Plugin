@@ -2,8 +2,8 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "Unraid-Nvidia">
 <!ENTITY author    "LinuxServer.io">
-<!ENTITY version   "2019.04.06">
-<!ENTITY md5       "3807580e05f3abc5568fee09681c6ce2">
+<!ENTITY version   "2019.04.06a">
+<!ENTITY md5       "2a192f9423f2965e6ce458374fca771d">
 <!ENTITY launch    "Settings/Unraid-Nvidia">
 <!ENTITY plugdir   "/usr/local/emhttp/plugins/&name;">
 <!ENTITY github    "linuxserver/Unraid-Nvidia-Plugin">
@@ -13,6 +13,9 @@
 <PLUGIN name="&name;" author="&author;" version="&version;" launch="&launch;" pluginURL="&pluginURL;" min="6.6.6" support="https://forums.unraid.net/topic/77813-plugin-linuxserverio-unraid-nvidia/" icon="film">
 
 <CHANGES>
+###2019-04-06a
+- Prevent premature closing of download box
+
 ###2019-04-06
 - Minor formatting changes
 

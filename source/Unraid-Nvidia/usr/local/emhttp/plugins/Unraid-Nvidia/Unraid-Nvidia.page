@@ -180,7 +180,7 @@ $(function()
 
 			<tr>
 				<td>GPU 0 Model &amp Bus:</td>
-						<td style="color:red"><b><?=`sed -n 1p /tmp/nvidia`?>&nbsp&nbsp&nbsp&nbsp&nbsp<?=`sed -n 2p /tmp/nvidia/nvidia`?></b></td>
+						<td style="color:red"><b><?=`sed -n 1p /tmp/nvidia/nvidia`?>&nbsp&nbsp&nbsp&nbsp&nbsp<?=`sed -n 2p /tmp/nvidia/nvidia`?></b></td>
 			</tr>
 
 			<tr>
@@ -190,7 +190,7 @@ $(function()
 
 			<tr>
 				<td>GPU 1 Model &amp Bus:</td>
-						<td style="color:red"><b><?=`sed -n 4p /tmp/nvidia`?>&nbsp&nbsp&nbsp&nbsp&nbsp<?=`sed -n 5p /tmp/nvidia/nvidia`?></b></td>
+						<td style="color:red"><b><?=`sed -n 4p /tmp/nvidia/nvidia`?>&nbsp&nbsp&nbsp&nbsp&nbsp<?=`sed -n 5p /tmp/nvidia/nvidia`?></b></td>
 			</tr>
 
 			<tr>
@@ -200,7 +200,7 @@ $(function()
 
 			<tr>
 				<td>GPU 2 Model &amp Bus:</td>
-						<td style="color:red"><b><?=`sed -n 7p /tmp/nvidia`?>&nbsp&nbsp&nbsp&nbsp&nbsp<?=`sed -n 8p /tmp/nvidia/nvidia`?></b></td>
+						<td style="color:red"><b><?=`sed -n 7p /tmp/nvidia/nvidia`?>&nbsp&nbsp&nbsp&nbsp&nbsp<?=`sed -n 8p /tmp/nvidia/nvidia`?></b></td>
 			</tr>
 
 			<tr>
@@ -210,7 +210,7 @@ $(function()
 
 			<tr>
 				<td>GPU 3 Model &amp Bus:</td>
-						<td style="color:red"><b><?=`sed -n 10p /tmp/nvidia`?>&nbsp&nbsp&nbsp&nbsp&nbsp<?=`sed -n 11p /tmp/nvidia/nvidia`?></b></td>
+						<td style="color:red"><b><?=`sed -n 10p /tmp/nvidia/nvidia`?>&nbsp&nbsp&nbsp&nbsp&nbsp<?=`sed -n 11p /tmp/nvidia/nvidia`?></b></td>
 			</tr>
 
 			<tr>

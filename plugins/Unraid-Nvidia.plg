@@ -3,7 +3,7 @@
 <!ENTITY name      "Unraid-Nvidia">
 <!ENTITY author    "LinuxServer.io">
 <!ENTITY version   "2019.04.06">
-<!ENTITY md5       "cd66c11acfde00f3a3f4d390c8b99e58">
+<!ENTITY md5       "3807580e05f3abc5568fee09681c6ce2">
 <!ENTITY launch    "Settings/Unraid-Nvidia">
 <!ENTITY plugdir   "/usr/local/emhttp/plugins/&name;">
 <!ENTITY github    "linuxserver/Unraid-Nvidia-Plugin">
@@ -69,6 +69,10 @@ if [ -d /dev/dri ]; then
 fi
 
 # Parse Nvidia Details
+if [ -f /tmp/nvidia ]; then
+    rm /tmp/nvidia
+fi
+
 mkdir -p /tmp/nvidia/
 nvidia-smi --query-gpu=gpu_name,gpu_bus_id,gpu_uuid --format=csv,noheader | sed -e s/00000000://g | sed 's/\,\ /\n/g' > /tmp/nvidia/nvidia
 

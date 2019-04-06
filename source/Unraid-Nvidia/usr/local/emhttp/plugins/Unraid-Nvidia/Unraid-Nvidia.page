@@ -173,42 +173,42 @@ $(function()
 
 			<tr>
 				<td>GPU 0 Model &amp Bus:</td>
-						<td style="color:red"><b><?=`sed -n 1p /tmp/nvidia`?>&nbsp&nbsp&nbsp&nbsp&nbsp<?=`sed -n 2p /tmp/nvidia`?></b></td>
+						<td style="color:red"><b><?=`sed -n 1p /tmp/nvidia`?>&nbsp&nbsp&nbsp&nbsp&nbsp<?=`sed -n 2p /tmp/nvidia/nvidia`?></b></td>
 			</tr>
 
 			<tr>
 				<td>GPU 0 UUID:</td>
-						<td style="color:red"><b><?=`sed -n 3p /tmp/nvidia`?></b></td>
+						<td style="color:red"><b><?=`sed -n 3p /tmp/nvidia/nvidia`?></b></td>
 			</tr>
 
 			<tr>
 				<td>GPU 1 Model &amp Bus:</td>
-						<td style="color:red"><b><?=`sed -n 4p /tmp/nvidia`?>&nbsp&nbsp&nbsp&nbsp&nbsp<?=`sed -n 5p /tmp/nvidia`?></b></td>
+						<td style="color:red"><b><?=`sed -n 4p /tmp/nvidia`?>&nbsp&nbsp&nbsp&nbsp&nbsp<?=`sed -n 5p /tmp/nvidia/nvidia`?></b></td>
 			</tr>
 
 			<tr>
 				<td>GPU 1 UUID:</td>
-						<td style="color:red"><b><?=`sed -n 6p /tmp/nvidia`?></b></td>
+						<td style="color:red"><b><?=`sed -n 6p /tmp/nvidia/nvidia`?></b></td>
 			</tr>
 
 			<tr>
 				<td>GPU 2 Model &amp Bus:</td>
-						<td style="color:red"><b><?=`sed -n 7p /tmp/nvidia`?>&nbsp&nbsp&nbsp&nbsp&nbsp<?=`sed -n 8p /tmp/nvidia`?></b></td>
+						<td style="color:red"><b><?=`sed -n 7p /tmp/nvidia`?>&nbsp&nbsp&nbsp&nbsp&nbsp<?=`sed -n 8p /tmp/nvidia/nvidia`?></b></td>
 			</tr>
 
 			<tr>
 				<td>GPU 2 UUID:</td>
-						<td style="color:red"><b><?=`sed -n 9p /tmp/nvidia`?></b></td>
+						<td style="color:red"><b><?=`sed -n 9p /tmp/nvidia/nvidia`?></b></td>
 			</tr>
 
 			<tr>
 				<td>GPU 3 Model &amp Bus:</td>
-						<td style="color:red"><b><?=`sed -n 10p /tmp/nvidia`?>&nbsp&nbsp&nbsp&nbsp&nbsp<?=`sed -n 11p /tmp/nvidia`?></b></td>
+						<td style="color:red"><b><?=`sed -n 10p /tmp/nvidia`?>&nbsp&nbsp&nbsp&nbsp&nbsp<?=`sed -n 11p /tmp/nvidia/nvidia`?></b></td>
 			</tr>
 
 			<tr>
 				<td>GPU 3 UUID:</td>
-						<td style="color:red"><b><?=`sed -n 12p /tmp/nvidia`?></b></td>
+						<td style="color:red"><b><?=`sed -n 12p /tmp/nvidia/nvidia`?></b></td>
 			</tr>
 
 	</table>

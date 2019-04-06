@@ -66,8 +66,8 @@ if [ -d /dev/dri ]; then
 fi
 
 # Parse Nvidia Details
-
-nvidia-smi --query-gpu=gpu_name,gpu_bus_id,gpu_uuid --format=csv,noheader | sed -e s/00000000://g | sed 's/\,\ /\n/g' > /tmp/nvidia
+mkdir -p /tmp/nvidia/
+nvidia-smi --query-gpu=gpu_name,gpu_bus_id,gpu_uuid --format=csv,noheader | sed -e s/00000000://g | sed 's/\,\ /\n/g' > /tmp/nvidia/nvidia
 
 echo ""
 echo "----------------------------------------------------"

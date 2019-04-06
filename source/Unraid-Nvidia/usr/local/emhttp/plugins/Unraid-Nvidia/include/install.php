@@ -55,6 +55,9 @@ $downloadURL = $sources[$build]['imageURL'];
 
 echo "Base URL: $downloadURL\n\n";
 
+echo "TO AVOID CORRUPTION\n";
+echo "DO NOT CLOSE THIS WINDOW UNTIL YOU SEE THE DONE PROMPT\n\n";
+
 download($downloadURL."/bzimage","/tmp/mediabuild/bzimage",$error);
 download($downloadURL."/bzroot","/tmp/mediabuild/bzroot",$error);
 download($downloadURL."/bzroot-gui","/tmp/mediabuild/bzroot-gui",$error);
@@ -91,12 +94,4 @@ if ( hash_file("sha256", "/tmp/mediabuild/bzimage") != $bzimageSHA256[0] || hash
   file_put_contents("/tmp/mediabuild/reboot","reboot");
 
 }
-
-
-
-
-
-
-
-
 ?>

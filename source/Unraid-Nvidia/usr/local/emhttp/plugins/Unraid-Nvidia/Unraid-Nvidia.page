@@ -42,7 +42,7 @@ $(function() {
   }
 });
 
-var URL = "/plugins/Unraid-Nvidia/include/exec.php";
+var nvURL = "/plugins/Unraid-Nvidia/include/exec.php";
 
 function showDescription0(build)
 {
@@ -62,7 +62,7 @@ function showDescription(build)
 {
   $("#install").prop("disabled",false);
 
-  $.post(URL,{action:'show_description',build:build},function(data)
+  $.post(nvURL,{action:'show_description',build:build},function(data)
   {
     if (data)
     {
@@ -100,7 +100,7 @@ function installBuild()
 }
 
 function checkReboot() {
-    $.post(URL,{action:'check_reboot'},function(data){
+    $.post(nvURL,{action:'check_reboot'},function(data){
       if (data){
         $("#reboot").show();
       }
@@ -128,7 +128,7 @@ $(function()
     showCancelButton: false
   });
 
-  $.post(URL,{action:'build_buttons'},function(data)
+  $.post(nvURL,{action:'build_buttons'},function(data)
   {
     if (data)
     {
